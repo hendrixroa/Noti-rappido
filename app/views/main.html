@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+    <div class="panel panel-default">
+      <div class="my-panel"> <span class="glyphicon glyphicon-th-list" ng-click="clickNews()"></span>
+      <div class="title_panel">
+        {{title_panel}}
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="news" ng-repeat="noticias in news" ng-click="mostrarCompleta(noticias)">
+        <div class="row">
+          <div class="col-md-1 col-sm-1 col-xs-2 col-lg-1">
+            <img src="{{noticias.image}}" width="80" height="80" class="img-news">
+          </div>
+          <div class="col-md-9 col-sm-9 col-xs-9 col-lg-9 col-md-offset-1 col-sm-offset-1 col-lg-offset-1 col-xs-offset-1">
+            <h3 class="news-title">{{noticias.title}}</h3>
+          </div>
+        </div>
+        <div class="news-complete" ng-show="id_news == noticias.id && mostrar == true">
+          <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-3 col-lg-3">
+              <img src="{{noticias.image}}" class="img-complete" >
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-12 col-lg-9">
+              <h3 class="title-news-complet">{{noticias.title}}</h3>
+            </div><br>
+            <div class="row">
+              <div class="col-md-8 col-sm-8 col-xs-10 col-lg-8">
+                <p class="news-content">{{noticias.content}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
